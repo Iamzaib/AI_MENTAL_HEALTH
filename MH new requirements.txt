@@ -1,0 +1,37 @@
+
+1. Convert this column "year_of_birth" to computed age, subtract 2022- year_of_birth to get the AGE
+
+2. Use one hot encode for the following features - ethnic_group, institution_country, student_type_location, personality_type, work_field
+
+3. Use Binary encoding for the following features - 'home_country', 'course_of_study'
+
+4. Check for multi-colinearity in the features
+
+5. Use this mapping for this feature below
+study_map = {'1 year course' : 0,
+'Foundation year' : 0,
+'HND' : 0,
+'NCE' :0 ,
+'Undergraduate 1st year' : 1,
+'Undergraduate 2nd year' : 1,
+'Undergraduate 3rd year' : 1,
+'Undergraduate 4th year' : 1,
+'Postgraduate 1st year' : 2,
+'Postgraduate 2nd year' : 2,
+'PhD 1st year' : 3,
+'PhD 2nd year' : 3,
+'PhD 3rd year' : 3,
+'PhD 4th year' : 3,
+'PhD final year' : 3}
+df['year_of_study'] = df['year_of_study'].map(study_map)
+
+6. In addition it was finalised to build 3model; one using all the features and presenting the results(as already exists in the pipeline), another one for 25th percentile benchmark for the feature importance and presenting the results. Compare the results of the previous two. Lastly the model for the inference based on the data we could extract from the fresh data.
+
+7. From the dashboard, once the inference data is uploaded. There should be a function to target the onehot encoded and binary encoded features respectively where it's transformed and preprocess it before it's passed for modelling.
+
+We are particular about recall and precision please. Anything to optimised them.
+
+
+14350-> international std 
+9250-> United kingdom -> home std
+9250-> european std
